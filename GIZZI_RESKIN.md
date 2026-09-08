@@ -3,17 +3,24 @@
 ## Trees (keep separate)
 | Path | Role |
 |------|------|
-| `~/Projects/basement-temp/public/games/kombat/` | Live web Brawl (rollback) |
-| `~/Projects/gizzi-brawl-melee/` | Full doldecomp/melee clone for platform-fighter redo |
+| `~/Projects/basement-temp/public/games/kombat/` | Live web Brawl (rollback) → https://brawl.allternit.com |
+| `~/Projects/gizzi-brawl-melee/` | Fork working tree (`Gizziio/melee`, branch `gizzi-reskin`) |
 | `~/Desktop/gizzi-brawl/melee-decomp/` | Desktop mirror of the decomp |
+| `~/Projects/basement-temp/public/games/brawl-melee/` | Melee-*feel* web prototype (no disc; playable in browser) |
 
-## GitHub fork
-Upstream: https://github.com/doldecomp/melee
-Create Joe’s fork via GitHub UI or `gh repo fork doldecomp/melee --clone=false` after `gh auth login`.
-Then: `git remote rename origin upstream && git remote add origin <your-fork-url>`
+## GitHub
+- Fork: https://github.com/Gizziio/melee
+- Branch: `gizzi-reskin`
+- Upstream: https://github.com/doldecomp/melee
 
-## Build requirements (upstream)
-Legal Melee ISO → extract system data into `orig/GALE01` (see upstream README). No disc data in this tree.
+## Phases
+1. **Cast map** — `GIZZI_CAST_MAP.md` (done). Donor physics stay until models land.
+2. **Legal ISO** — extract into `orig/GALE01` (Joe provides disc). Required to build / swap art.
+3. **Name + CSS labels** — overlay Gizzi names on select / results once string tables are located in rebuilt assets.
+4. **Texture/model swap** — per mapped CKIND, starting with Mario→Gizzi, Fox→Grok, Falcon→Codex.
+5. **Web parallel** — `brawl-melee` platform-fighter using live Brawl sprites so we can play Melee-feel without waiting on ISO.
 
-## Reskin direction
-Replace fighter visuals/names with Gizzi cast (Codex, Grok, …) on a branch `gizzi-reskin`. Do not merge into live web kombat.
+## Rules
+- Never merge this tree into live `kombat/`.
+- No disc data in git.
+- Prefer identity-preserving art from live Brawl sheets when generating substitutes.
