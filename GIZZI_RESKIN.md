@@ -24,3 +24,8 @@
 - Never merge this tree into live `kombat/`.
 - No disc data in git.
 - Prefer identity-preserving art from live Brawl sheets when generating substitutes.
+
+## Status (2026-09-08)
+- Cast map committed on `gizzi-reskin`.
+- Web Melee-feel prototype scaffolded at `~/Desktop/gizzi-brawl/brawl-melee/` and `~/Projects/basement-temp/public/games/brawl-melee/` (Gizzi vs Grok, %/stocks). Live `kombat` untouched.
+- Decomp build still blocked on legal ISO → `orig/GALE01`.
